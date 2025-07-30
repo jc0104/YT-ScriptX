@@ -2,19 +2,16 @@
 var host = window.location.host
 var protocol = window.location.protocol;
 var webUrl = protocol + "//" + host + "/";
-var initCss = [];
+var scriptUrl=getCurrentScriptPath().replace("scriptx.js","");
 
-function getCurrentScriptPath() {
-  const scripts = document.getElementsByTagName('script');
-  const currentScript = scripts[scripts.length - 1];
-  return currentScript.src;
-}
-console.log("脚本路径：", getCurrentScriptPath());
+var initCss = [
+    scriptUrl+"custom/public.css"
+];
 
 //初始化页面加载公共js脚本
 var initScripts = [
-        webUrl+"custom/sysinfo.js",
-        webUrl+"script/require/require.min.js"
+        scriptUrl+"custom/sysinfo.js",
+        scriptUrl+"script/require/require.min.js"
     ];
 //****************************************************************************************************************************************************
 //页面加载-开始
@@ -184,10 +181,17 @@ function IsNull(Stra) {
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 //校验验证-结束
 //****************************************************************************************************************************************************
-
-
-
-
+//****************************************************************************************************************************************************
+//XXXXX-开始
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+var getCurrentScriptPath=function() {
+  const scripts = document.getElementsByTagName('script');
+  const currentScript = scripts[scripts.length - 1];
+  return currentScript.src;
+}
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+//XXXXX-结束
+//****************************************************************************************************************************************************
 
 
 //****************************************************************************************************************************************************
