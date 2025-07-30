@@ -10,6 +10,7 @@ var initCss = [
 
 //初始化页面加载公共js脚本
 var initScripts = [
+        scriptUrl+"script/jquery/jquery-3.6.0.min.js",
         scriptUrl+"custom/sysinfo.js",
         scriptUrl+"script/require/require.min.js"
     ];
