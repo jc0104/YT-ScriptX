@@ -3,8 +3,19 @@ var host = window.location.host
 var protocol = window.location.protocol;
 var webUrl = protocol + "//" + host + "/";
 var initCss = [];
+
+function getCurrentScriptPath() {
+  const scripts = document.getElementsByTagName('script');
+  const currentScript = scripts[scripts.length - 1];
+  return currentScript.src;
+}
+console.log("脚本路径：", getCurrentScriptPath());
+
 //初始化页面加载公共js脚本
-var initScripts = [];
+var initScripts = [
+        webUrl+"custom/sysinfo.js",
+        webUrl+"script/require/require.min.js"
+    ];
 //****************************************************************************************************************************************************
 //页面加载-开始
 //----------------------------------------------------------------------------------------------------------------------------------------------------
