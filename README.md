@@ -1,2 +1,3 @@
-# YT-ScriptX
-脚本中心
+# YT-ScriptX 组件中心
+
+https://jc0104.github.io/YT-ScriptX/
