@@ -184,7 +184,7 @@ function IsNull(Stra) {
 //****************************************************************************************************************************************************
 //XXXXX-开始
 //----------------------------------------------------------------------------------------------------------------------------------------------------
-var getCurrentScriptPath=function() {
+function getCurrentScriptPath() {
   const scripts = document.getElementsByTagName('script');
   const currentScript = scripts[scripts.length - 1];
   return currentScript.src;
