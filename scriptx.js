@@ -3,7 +3,7 @@ var host = window.location.host
 var protocol = window.location.protocol;
 var webUrl = protocol + "//" + host + "/";
 var scriptUrl=getCurrentScriptPath();
-scriptUrl=scriptUrl.replace(scriptUrl.split("//")[scriptUrl.split("//").length-1],"")
+scriptUrl=scriptUrl.replace(scriptUrl.split("/")[scriptUrl.split("/").length-1],"")
 
 var initCss = [
     scriptUrl+"custom/public.css"
