@@ -26,7 +26,7 @@ var loadPage = function (callback) {
     loadJS(newScripts, function () {
         console.log("所有js脚本已加载完成！");
         if (typeof callback === 'function') callback();
-        document.title = SN;
+        document.title += SN;
     }, 1);
 }
 //----------------------------------------------------------------------------------------------------------------------------------------------------
