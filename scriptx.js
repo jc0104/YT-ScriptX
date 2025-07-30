@@ -5,7 +5,7 @@ var webUrl = protocol + "//" + host + "/";
 var initCss = [];
 //初始化页面加载公共js脚本
 var initScripts = [
-        "custom/require.min.js",
+        "custom/sysinfo.js",
         "script/require/require.min.js"
     ];
 //****************************************************************************************************************************************************
