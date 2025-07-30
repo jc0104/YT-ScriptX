@@ -1,7 +1,7 @@
 /^http(s*):\/\//.test(location.href) || alert('请先部署到 localhost 下再访问');
 var host = window.location.host
 var protocol = window.location.protocol;
-var web_url = protocol + "//" + host + "/";
+var webUrl = protocol + "//" + host + "/";
 //初始化页面加载公共css样式
 var initCss = [
     "public/style/public.css",
@@ -64,7 +64,7 @@ var loadScriptsSequentially = function (scripts, callback) {
             if (typeof callback === 'function') callback();
             return;
         }
-        $.getScript(web_url + scripts[index])
+        $.getScript(webUrl + scripts[index])
             .done(function () {
                 console.log("js脚本加载成功: " + scripts[index]);
                 index++;
@@ -86,7 +86,7 @@ var loadScriptsParallel = function (scripts, callback) {
     $.each(scripts, function (i, src) {
         deferreds.push(
             $.ajax({
-                url: web_url + src,
+                url: webUrl + src,
                 dataType: "script",
                 timeout: 5000, // 5秒超时
                 cache: true // 利用浏览器缓存
@@ -120,7 +120,7 @@ var loadCSS = function (css, themeId, callback) {
             id: themeId,
             rel: 'stylesheet',
             type: 'text/css',
-            href: web_url + cssUrl,
+            href: webUrl + cssUrl,
             'data-dynamic-theme': themeId + "-" + index
         })
             .appendTo('head')
@@ -303,11 +303,11 @@ var getEchartsData = function name(dataAPI, setData,callback) {
 }
 /* 调用示例
 showEcharts({
-        "epaths": { 'echarts.5.5.0': web_url + 'public/echarts/echarts.5.5.0' },
+        "epaths": { 'echarts.5.5.0': webUrl + 'public/echarts/echarts.5.5.0' },
         "version": "5.5.0",
         "eDivID": "eDiv1",
-        "setAPI": { "url": web_url + "data/echarts/base/1.json", "params": null, "type": "get", "IsAsync": true },
-        "dataAPI": { "url": web_url + "data/echarts/data/bar/bar_1_data.json", "params": null, "type": "get", "IsAsync": true },
+        "setAPI": { "url": webUrl + "data/echarts/base/1.json", "params": null, "type": "get", "IsAsync": true },
+        "dataAPI": { "url": webUrl + "data/echarts/data/bar/bar_1_data.json", "params": null, "type": "get", "IsAsync": true },
         "dNames": ['name', 'value'],
         "snList": [],
         "stList": ['bar']

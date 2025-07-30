@@ -1,4 +1,7 @@
 /^http(s*):\/\//.test(location.href) || alert('请先部署到 localhost 下再访问');
+var host = window.location.host
+var protocol = window.location.protocol;
+var webUrl = protocol + "//" + host + "/";
 var initCss = [];
 //初始化页面加载公共js脚本
 var initScripts = [];
@@ -52,7 +55,7 @@ var loadScriptsSequentially = function (scripts, callback) {
             if (typeof callback === 'function') callback();
             return;
         }
-        $.getScript(web_url + scripts[index])
+        $.getScript(webUrl + scripts[index])
             .done(function () {
                 console.log("js脚本加载成功: " + scripts[index]);
                 index++;
@@ -74,7 +77,7 @@ var loadScriptsParallel = function (scripts, callback) {
     $.each(scripts, function (i, src) {
         deferreds.push(
             $.ajax({
-                url: web_url + src,
+                url: webUrl + src,
                 dataType: "script",
                 timeout: 5000, // 5秒超时
                 cache: true // 利用浏览器缓存
@@ -108,7 +111,7 @@ var loadCSS = function (css, themeId, callback) {
             id: themeId,
             rel: 'stylesheet',
             type: 'text/css',
-            href: web_url + cssUrl,
+            href: webUrl + cssUrl,
             'data-dynamic-theme': themeId + "-" + index
         })
             .appendTo('head')
