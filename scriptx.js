@@ -5,8 +5,8 @@ var webUrl = protocol + "//" + host + "/";
 var initCss = [];
 //初始化页面加载公共js脚本
 var initScripts = [
-        "custom/sysinfo.js",
-        "script/require/require.min.js"
+        webUrl+"custom/sysinfo.js",
+        webUrl+"script/require/require.min.js"
     ];
 //****************************************************************************************************************************************************
 //页面加载-开始
@@ -58,7 +58,7 @@ var loadScriptsSequentially = function (scripts, callback) {
             if (typeof callback === 'function') callback();
             return;
         }
-        $.getScript(webUrl + scripts[index])
+        $.getScript(scripts[index])
             .done(function () {
                 console.log("js脚本加载成功: " + scripts[index]);
                 index++;
@@ -80,7 +80,7 @@ var loadScriptsParallel = function (scripts, callback) {
     $.each(scripts, function (i, src) {
         deferreds.push(
             $.ajax({
-                url: webUrl + src,
+                url: src,
                 dataType: "script",
                 timeout: 5000, // 5秒超时
                 cache: true // 利用浏览器缓存
@@ -114,7 +114,7 @@ var loadCSS = function (css, themeId, callback) {
             id: themeId,
             rel: 'stylesheet',
             type: 'text/css',
-            href: webUrl + cssUrl,
+            href: cssUrl,
             'data-dynamic-theme': themeId + "-" + index
         })
             .appendTo('head')
