@@ -2,17 +2,17 @@
 var host = window.location.host
 var protocol = window.location.protocol;
 var webUrl = protocol + "//" + host + "/";
-var scriptUrl=getCurrentScriptPath();
-scriptUrl=scriptUrl.replace(scriptUrl.split("/")[scriptUrl.split("/").length-1],"")
+var scriptxUrl=getCurrentScriptPath();
+scriptxUrl=scriptxUrl.replace(scriptxUrl.split("/")[scriptxUrl.split("/").length-1],"")
 
 var initCss = [
-    scriptUrl+"custom/public.css"
+    scriptxUrl+"custom/public.css"
 ];
 
 //初始化页面加载公共js脚本
 var initScripts = [
-        scriptUrl+"custom/sysinfo.js",
-        scriptUrl+"script/require/require.min.js"
+        scriptxUrl+"custom/sysinfo.js",
+        scriptxUrl+"script/require/require.min.js"
     ];
 //****************************************************************************************************************************************************
 //页面加载-开始
