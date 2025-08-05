@@ -6,7 +6,8 @@ var scriptxUrl=getCurrentScriptPath();
 scriptxUrl=scriptxUrl.replace(scriptxUrl.split("/")[scriptxUrl.split("/").length-1],"")
 
 var initCss = [
-    scriptxUrl+"custom/public.css"
+    scriptxUrl+"custom/public.css",
+    scriptxUrl+"style/icons/font-awesome.min.css"
 ];
 
 //初始化页面加载公共js脚本
