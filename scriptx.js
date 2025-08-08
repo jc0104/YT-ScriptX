@@ -12,6 +12,7 @@ var protocol = window.location.protocol;
 var webUrl = protocol + "//" + host + "/";
 var scriptxUrl=getCurrentScriptPath();
 scriptxUrl=scriptxUrl.replace(scriptxUrl.split("/")[scriptxUrl.split("/").length-1],"")
+console.log(scriptxUrl);
 
 var initCss = [
     scriptxUrl+"custom/public.css",
