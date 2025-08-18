@@ -6,27 +6,19 @@
 }
 
 @font-face {
-    font-family: 'pingfang';
+    font-family: 'pingfangjian';
     src: url('font/pingfang-jian.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'AlimamaShuHeiTi-Bold';
-    src: url('font/AlimamaShuHeiTi-Bold.ttf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: AlimamaBold;
+    font-family: AlimamaShuHeiTiBold;
     src: url('font/AlimamaShuHeiTiBold.otf');
 }
 
 @font-face {
-    font-family: AlternateBold;
+    font-family: DINAlternateBold;
     src: url('font/DINAlternateBold.otf');
 }
 
