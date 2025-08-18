@@ -1,3 +1,39 @@
+@font-face {
+    font-family: 'dina';
+    src: url('font/din-a.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pingfang';
+    src: url('font/pingfang-jian.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlimamaShuHeiTi-Bold';
+    src: url('font/AlimamaShuHeiTi-Bold.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: AlimamaBold;
+    src: url('font/AlimamaShuHeiTiBold.otf');
+}
+
+@font-face {
+    font-family: AlternateBold;
+    src: url('font/DINAlternateBold.otf');
+}
+
+@font-face {
+    font-family: PingfangRegular;
+    src: url('font/PingfangRegular.otf');
+}
 *{
     margin: 0;
     padding: 0;
